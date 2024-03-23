@@ -1,0 +1,22 @@
+/*
+body{
+    background-color: blue;
+}*/
+section {
+    background-color: antiquewhite;
+}
+.headers {
+    color: blue;
+}
+#gmail {
+    background-color: rgb(205, 189, 12);
+}
+#github {
+    background-color: rgba(129, 240, 19, 0.629);
+}
+#portolio{
+    background-color: aqua;
+}
+.hr img {
+    width: 100px;
+}
