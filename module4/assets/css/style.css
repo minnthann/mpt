@@ -1,0 +1,18 @@
+
+section {
+    border: 15px solid hsla(0, 82%, 4%, 0.904);
+    height: 600px;
+    text-align: center;
+    width: 600px;
+}
+img {
+    width: 200px;
+    background-color: rgb(30, 196, 202);
+    height: 200px;
+    /* Todo: Add a margin property */
+    margin: 20px;
+    /*Todo: Add a padding property */
+    padding: 10px;
+    /* Todo: Add a border property */
+    border: 15px solid blue;
+}
