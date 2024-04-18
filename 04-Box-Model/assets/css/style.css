@@ -7,7 +7,7 @@ section {
 }
 img {
     width: 200px;
-    background-color: rgb(30, 196, 202);
+    background-color: #eef106;
     height: 200px;
     /* Todo: Add a margin property */
     margin: 20px;
