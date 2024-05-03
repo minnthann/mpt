@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --bg-color: #1f1f21;
+    --text-color: #fff;
+    --main-color: #ffae00;
+    --big-font: 7rem;
+    --p-font: 1.1r;
+}
+header{
+    padding-top: 2px;
+    /* margin-right: 32px; */
+    /* float: right;/ */
+    background-color: var(--main-color);
+    display: flex;
+    background-attachment: fixed;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    margin-bottom: 10px;
+}
+header h1 {
+    /* display: inline-block; */
+    font-size: 40px;
+    padding: 23px 20px;
+    /* text-align: center; */
+    /* align-items: center; */
+}
+header nav ul {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+}
+header nav ul a {
+    /* margin: 10px 15px; */
+    /* font-weight: lighter; */
+    font-size: 1.55vw;
+    padding: 10px 15px;
+    /* border: 2px solid#fff; */
+}
+header nav ul a:hover{
+    background-color: aqua;
+     border-radius: 23px;
+}
+nav {
+    font-size: 25px;
+    margin: 23px 20px;
+}
+.pi img {
+    background-image: url(digital-marketing-meeting.jpg);
+    height: 700px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+}
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x:hidden;
+} 
+section{
+    /* padding: 0 15%; */
+}
+span{
+    margin: 39px;
+}
+/* ခေါင်းစဉ် */
+.home {
+    background-color: #db2626;
+    float: left;
+    /* position: relative; */
+    /* left: 50px; */
+    width: 50%;
+    /* height: 50vh; */
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    /* 
+    gap:30px; */
+}
+/* name */
+.home-text h1{
+    font-size: 70px;
+    margin: 10px 0;
+    text-shadow: 4px 7px 3px blue ;
+}
+.home p{
+    font-size: var(--p-font);
+    font-weight: 400;
+    color: #c3c3c3;
+    line-height: 39px;
+    padding: 40px;
+    /* margin-bottom: 30px; */
+}
+/* photo */
+.hr{
+    padding: 30px;
+    text-align: center;
+    margin: 22px;
+}
+.hr img { 
+    /* padding: 10px; */
+    width: 100px;
+    border-radius: 25%;
+
+}
+.love {
+    /* background-image:url(hao.jpg); */
+    /* width: 50%; */
+    /* height: 50vh; */
+    /* border: 3px solid #db2626; */
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    clear: both;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    /* border: 5px solid #1212dd; */
+    /* margin-top: 5px; */
+    /* display: inline-block; */
+}
+.love img{
+    width: 200px;
+    height: 200px;
+    border: 1px solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    /* object-fit: contain; */
+}
+.a12 {    
+    /* justify-content: center; */
+    /* height: 50vh; */
+    /* background-color: aqua; */
+    /* float: right; */
+    display: flex;
+    flex-wrap: nowrap;
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    text-align: center;
+}
+.a12 img{
+    width: 120px;
+    margin: 5px;
+    /* height: 270px; */
+    display: block;
+} 
+
+
+.share{
+    /* position: absolute; */
+    /* bottom: 1rem; */
+    /* left: 15%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15px;
+}
+.share p{
+    font-size: 20px;
+    color: var(--text-color);
+    margin-right: 25px;
+}
+.social i{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    background: rgba(255, 255, 0, 0.384);
+    box-shadow: 0px 5px 10px #fff;
+    border: 1px solid #db2626;
+    /* border-radius: 100px; */
+    border-radius: 50%;
+    color: var(--text-color);
+    font-size: 20px;
+    margin: 0 7px;
+    transition: all 0.6s ease-in-out; 
+ }
+.social i:hover{
+    transform: translateY(-10px); 
+}
+footer {
+    background-color: var(--main-color);
+    margin-top: 25px;
+    text-align: center;
+    padding: 10px;
+}
+@media screen and (max-width: 768px) {
+    header, main {
+      flex-direction: column;
+    }
+  
+    section {
+      padding-right: 0;
+    }
+  
+    aside {
+      width: 100%;
+      text-align: center;
+    }
+
+    .a12 {
+        flex-direction: column;
+    }
+    .home{
+        flex-direction: column;
+    }
+    .love {
+        flex-direction: column;
+    }
+}
