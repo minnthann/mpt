@@ -17,7 +17,7 @@ before (function() {
 });
 
 describe ("logEvenNums", function() {
-    if ("should log numbers 0 through 'num'", function(){
+    it ("should log even numbers 0 through 'num'", function() {
         var num = 13;
 
         logEvenNums(num);
@@ -25,7 +25,7 @@ describe ("logEvenNums", function() {
     });
 });
 
-after (function(){
-    console.log = window._temp.log
-    delete window._temp
+after (function() {
+    console.log = window._temp.log;
+    delete window._temp;
 });
