@@ -10,16 +10,16 @@
 
 function sumArray(arr) {
     // Initialize sum to 0
-    let sum = 0;
+    let total = 0;
     
     // Iterate over each element in the array
     for (let i = 0; i < arr.length; i++) {
       // Add the current element to the sum
-      sum += arr[i];
+      total += arr[i];
     }
     
     // Return the total sum
-    return sum;
+    return total;
   }
   
   var arr = [3, 1, 5, 6];
