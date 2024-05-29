@@ -1,38 +1,3 @@
-// TODO: What is `this` referring to here?
-// console.log(this);
-
-// TODO: What is `this` referring to here?
-// ANS: this refer to window(browser)
-// function helloThis() {
-//   console.log('Inside this function, this is ' + this);
-// }
-
-// TODO: What is `this` referring to here? What will be logged in the console?
-// ans:this refer to child Object
-// var child = {
-//   age: 10,
-//   ageTenYears: function() {
-//     console.log(this.age + 10);
-//   }
-// };
-
-// TODO: What is `this` referring to here?
-// console.log(this);
-
-// TODO: What is `this` referring to here?
-// ANS: this refer to window(browser)
-// function helloThis() {
-//   console.log('Inside this function, this is ' + this);
-// }
-
-// TODO: What is `this` referring to here? What will be logged in the console?
-// ans:this refer to child Object
-// var child = {
-//   age: 10,
-//   ageTenYears: function() {
-//     console.log(this.age + 10);
-//   }
-// };
 // Define an object named 'car'
 const car = {
   // The 'brand' property of the 'car' object
@@ -88,7 +53,47 @@ function showGlobalThis() {
 showGlobalThis();
 
 // In a browser
-// console.log(window); // Logs the window object
+console.log(window); // Logs the window object
 
 // In Node.js
 // console.log(global); // Logs the global object
+
+
+
+
+// TODO: What is `this` referring to here?
+// console.log(this);
+
+// TODO: What is `this` referring to here?
+// ANS: this refer to window(browser)
+// function helloThis() {
+//   console.log('Inside this function, this is ' + this);
+// }
+
+// TODO: What is `this` referring to here? What will be logged in the console?
+// ans:this refer to child Object
+// var child = {
+//   age: 10,
+//   ageTenYears: function() {
+//     console.log(this.age + 10);
+//   }
+// };
+
+// TODO: What is `this` referring to here?
+// console.log(this);
+
+// TODO: What is `this` referring to here?
+// ANS: this refer to window(browser)
+// function helloThis() {
+//   console.log('Inside this function, this is ' + this);
+// }
+
+// TODO: What is `this` referring to here? What will be logged in the console?
+// ans:this refer to child Object
+// var child = {
+//   age: 10,
+//   ageTenYears: function() {
+//     console.log(this.age + 10);
+//   }
+// };
+
