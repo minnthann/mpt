@@ -16,4 +16,6 @@ signUpButton.addEventListener("click", function(event){
         password: passwordInput.value.trim()
     };
     localStorage.setItem("user", JSON.stringify(user));
+    alert('Form data saved!');
+    // form.reset();
 });
