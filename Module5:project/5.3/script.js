@@ -3,11 +3,11 @@ var tasks = {};
 var createTask = function(taskText, taskDate, taskList) {
     var taskLi = $("<li>").addClass("list-group-item");
     var taskSpan = $("<span>")
-    .addClass("badge badge-primary badge-pill")
-    .text(taskDate);
+        .addClass("badge badge-primary badge-pill")
+        .text(taskDate);
     var taskP = $("<p>")
-    .addClass("m-1")
-    .text(taskText);
+        .addClass("m-1")
+        .text(taskText);
 
     taskLi.append(taskSpan, taskP);
 
@@ -16,6 +16,7 @@ var createTask = function(taskText, taskDate, taskList) {
 
 var loadTasks = function(){
     tasks = JSON.parse(localStorage.getItem("tasks"));
+
     if (!tasks) {
         tasks = {
             toDo: [],
@@ -24,6 +25,7 @@ var loadTasks = function(){
             done: []
         };
     }
+    
     $.each(tasks, function(list, arr) {
         console.log(list, arr);
         arr.forEach(function(task) {
@@ -62,6 +64,7 @@ $("#task-form-modal .btn-primary").click(function() {
         saveTasks();
     }
 });
+
 
 $("#remove-tasks").on("click", function() {
     for (var key in tasks) {
