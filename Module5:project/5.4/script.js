@@ -38,6 +38,69 @@ var saveTasks = function() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
 };
 
+// 4.new
+$(".card .list-group").sortable({
+
+    connectWith: $(".card .list-group"),
+    scroll: false,
+    tolerance: "pointer",
+    helper: "clone",
+    activate: function(event, ui) {
+        console.log(ui);
+    },
+    deactivate: function(event, ui) {
+        console.log(ui);
+    },
+    over: function(event) {
+        console.log(event);
+    },
+    out: function(event) {
+        console.log(event);
+    },
+    update: function() {
+        var tempArr = [];
+
+        $(this)
+            .children()
+            .each(function() {
+                tempArr.push({
+                    text: $(this)
+                    .find("p")
+                    .text()
+                    .trim(),
+                    date: $(this)
+                    .find("span")
+                    .text()
+                    .trim()
+                });
+            });
+
+            var arrName = $(this)
+            .attr("id")
+            .replace("list-", "");
+
+            tasks[arrName] = tempArr;
+            saveTasks();
+    },
+    stop: function(event) {
+        $(this).removeClass("dropover");
+    }
+});
+
+
+$("#trash").droppable({
+    accept: ".card .list-group-item",
+    tolerance: "touch",
+    drop: function(event, ui) {
+        ui.draggable.remove();
+    },
+    over: function(event, ui) {
+        console.log(ui);
+    },
+    out: function(event, ui) {
+        console.log(ui);
+    }
+});
 
 // modal was triggered
 
@@ -61,7 +124,7 @@ $("#task-form-modal .btn-primary").click(function() {
             text: taskText,
             date: taskDate
         });
-        saveTasks();
+        saveTasks(); 
     }
 });
 
@@ -71,7 +134,7 @@ $(".list-group").on("click", "p", function() {
         .text()
         .trim();
 
-        var textInput = $("<textarea")
+        var textInput = $("<textarea>")
             .addClass("form-control")
             .val(text);
         $(this).replaceWith(textInput);
@@ -87,15 +150,15 @@ $(".list-group").on("blur", "textarea", function() {
         .attr("id")
         .replace("list-", "");
     var index = $(this)
-        .closest (".list-group-item")
+        .closest(".list-group-item")
         .index();
 
-    tasksp[status][index].text = text;
+    tasks[status][index].text = text;
     saveTasks();
 
     var taskP = $("<p>")
         .addClass("m-1")
-        .text (text);
+        .text(text);
 
     $(this).replaceWith(taskP);
 });
@@ -108,19 +171,19 @@ $(".list-group").on("click", "span", function() {
     var dateInput = $("<input>")
         .attr("type", "text")
         .addClass("form-control")
-        val(date);
+        .val(date);
     $(this).replaceWith(dateInput);
 
-    dateInput.trigger ("focus");
+    dateInput.trigger("focus");
 });
 
-$(".list-group").on("blur", "input[type='text']", function() {
+$(".list-group").on("change", "input[type='text']", function() {
     var date = $(this).val();
 
     var status = $(this)
         .closest(".list-group")
         .attr("id")
-        .replace("list", "");
+        .replace("list-", "");
     var index = $(this)
         .closest(".list-group-item")
         .index();
@@ -128,7 +191,7 @@ $(".list-group").on("blur", "input[type='text']", function() {
     tasks[status][index].date = date;
     saveTasks();
 
-    var tasksp = $("<span>")
+    var taskSpan = $("<span>")
         .addClass("badge badge-primary badge-pill")
         .text(date);
     $(this).replaceWith(taskSpan);
@@ -139,6 +202,7 @@ $("#remove-tasks").on("click", function() {
         tasks[key].length = 0;
         $("#list-" + key).empty();
     }
+    console.log(tasks);
     saveTasks();
 });
 
