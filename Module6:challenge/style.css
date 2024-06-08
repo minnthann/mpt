@@ -1,0 +1,34 @@
+body {
+    background-color: #f8f9fa;
+  }
+  
+  .list-group-item {
+    cursor: pointer;
+  }
+  
+  .weather-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .uv-favorable {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .uv-moderate {
+    background-color: #ffc107;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .uv-severe {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
