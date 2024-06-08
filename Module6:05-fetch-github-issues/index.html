@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather and News Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Weather and News Dashboard
+                </h1>
+                <h2 class="subtitle">
+                    Get the latest weather and news updates
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half">
+                    <div class="box">
+                        <h3 class="title is-4">Weather</h3>
+                        <input id="cityInput" class="input" type="text" placeholder="Enter city name">
+                        <button id="searchButton" class="button is-link mt-2">Search</button>
+                        <div id="weatherResults" class="mt-4">
+                            <!-- Weather results will appear here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <h3 class="title is-4">News</h3>
+                        <div id="newsResults">
+                            <!-- News results will appear here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals, other sections, and additional content can go here -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>

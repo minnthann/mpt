@@ -1,0 +1,15 @@
+/* Custom styles for the project */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+#weatherResults, #newsResults {
+    margin-top: 20px;
+}
+
+.box {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
